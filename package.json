@@ -1,0 +1,25 @@
+{
+  "name": "tetakehomeassignment",
+  "version": "1.0.0",
+  "description": "This project serves as my submission for the TE take-home assignment.",
+  "license": "ISC",
+  "author": "Oludare Busari",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:report": "npx playwright show-report",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.0",
+    "allure-playwright": "^3.4.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}
