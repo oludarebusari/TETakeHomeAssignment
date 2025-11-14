@@ -6,11 +6,9 @@ class DashboardPage implements IDashboardPage {
   readonly inventoryItems: Locator;
   readonly cartBadge: Locator;
 
-
-
   /**
    * Initializes a new instance of the DashboardPage class.
-   * 
+   *
    * @param {Page} page - The page object to use for locating elements.
    */
   constructor(page: Page) {
@@ -19,11 +17,11 @@ class DashboardPage implements IDashboardPage {
     this.cartBadge = page.locator('[data-test="shopping-cart-badge"]');
   }
 
-/**
- * Retrieves the number of products on the page.
- *
- * @returns {Promise<number>} A promise that resolves with the number of products on the page.
- */
+  /**
+   * Retrieves the number of products on the page.
+   *
+   * @returns {Promise<number>} A promise that resolves with the number of products on the page.
+   */
   async getProductCount(): Promise<number> {
     return await this.inventoryItems.count();
   }

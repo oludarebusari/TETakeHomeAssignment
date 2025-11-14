@@ -1,10 +1,10 @@
-import { test, expect } from "@playwright/test";
-import { createLoginPage } from "../../page-objects/loginPage";
-import { createDashboardPage } from "../../page-objects/dashboardPage";
-import { validCredentials } from "../../fixtures/loginData";
-import { cartItems } from "../../fixtures/cartItems";
+import { test, expect } from '@playwright/test';
+import { createLoginPage } from '../../page-objects/loginPage';
+import { createDashboardPage } from '../../page-objects/dashboardPage';
+import { validCredentials } from '../../fixtures/loginData';
+import { cartItems } from '../../fixtures/cartItems';
 
-test.describe("Add Item Tests", () => {
+test.describe('Add Item Tests', () => {
   let loginPage: ReturnType<typeof createLoginPage>;
   let dashboardPage: ReturnType<typeof createDashboardPage>;
 
@@ -16,12 +16,12 @@ test.describe("Add Item Tests", () => {
     dashboardPage = createDashboardPage(page);
   });
 
-  test("should not display cart badge when cart is empty", async () => {
+  test('should not display cart badge when cart is empty', async () => {
     // Verify that the cart badge is not visible when no items are added
     await expect(dashboardPage.cartBadge).not.toBeVisible();
   });
 
-  test("should add multiple products to cart and validate cart badge count", async () => {
+  test('should add multiple products to cart and validate cart badge count', async () => {
     // Add each item from the fixture to the cart using a loop
     for (const item of cartItems) {
       await dashboardPage.addItemToCart(item);

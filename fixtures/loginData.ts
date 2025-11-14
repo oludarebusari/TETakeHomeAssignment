@@ -5,10 +5,10 @@ config();
 
 export const validCredentials: Credentials = {
   username: process.env.SAUCEDEMO_USERNAME || 'standard_user',
-  password: process.env.SAUCEDEMO_PASSWORD || 'secret_sauce'
+  password: process.env.SAUCEDEMO_PASSWORD || 'secret_sauce',
 };
 
 export const invalidCredentials: Credentials = {
   username: 'invalid_user',
-  password: 'wrong_password'
+  password: 'wrong_password',
 };

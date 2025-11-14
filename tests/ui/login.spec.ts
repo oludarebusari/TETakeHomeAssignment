@@ -16,7 +16,9 @@ test.describe('Login Tests', () => {
     await expect(page).toHaveTitle('Swag Labs');
   });
 
-  test('should successfully log in with valid credentials and display products', async ({ page }) => {
+  test('should successfully log in with valid credentials and display products', async ({
+    page,
+  }) => {
     // Perform login with valid credentials
     await loginPage.login(validCredentials.username, validCredentials.password);
 
@@ -33,11 +35,16 @@ test.describe('Login Tests', () => {
 
   test('should display error message for invalid credentials', async () => {
     // Attempt login with invalid credentials
-    await loginPage.login(invalidCredentials.username, invalidCredentials.password);
+    await loginPage.login(
+      invalidCredentials.username,
+      invalidCredentials.password
+    );
 
     // Verify that the error message is visible and contains the expected text
     await expect(loginPage.getErrorMessageLocator()).toBeVisible();
-    await expect(loginPage.getErrorMessageLocator()).toContainText(ERROR_MESSAGES.INVALID_CREDENTIALS);
+    await expect(loginPage.getErrorMessageLocator()).toContainText(
+      ERROR_MESSAGES.INVALID_CREDENTIALS
+    );
   });
 
   test('should display error message when username is empty', async () => {
@@ -46,7 +53,9 @@ test.describe('Login Tests', () => {
 
     // Verify that the error message for required username is displayed
     await expect(loginPage.getErrorMessageLocator()).toBeVisible();
-    await expect(loginPage.getErrorMessageLocator()).toContainText(ERROR_MESSAGES.USERNAME_REQUIRED);
+    await expect(loginPage.getErrorMessageLocator()).toContainText(
+      ERROR_MESSAGES.USERNAME_REQUIRED
+    );
   });
 
   test('should display error message when password is empty', async () => {
@@ -55,6 +64,8 @@ test.describe('Login Tests', () => {
 
     // Verify that the error message for required password is displayed
     await expect(loginPage.getErrorMessageLocator()).toBeVisible();
-    await expect(loginPage.getErrorMessageLocator()).toContainText(ERROR_MESSAGES.PASSWORD_REQUIRED);
+    await expect(loginPage.getErrorMessageLocator()).toContainText(
+      ERROR_MESSAGES.PASSWORD_REQUIRED
+    );
   });
 });

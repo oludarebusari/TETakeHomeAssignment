@@ -14,11 +14,11 @@ class LoginPage implements ILoginPage {
   readonly loginButton: Locator;
   readonly errorMessage: Locator;
 
-/**
- * Initializes a new instance of the LoginPage class.
- *
- * @param {Page} page - The page object to use for locating elements.
- */
+  /**
+   * Initializes a new instance of the LoginPage class.
+   *
+   * @param {Page} page - The page object to use for locating elements.
+   */
   constructor(page: Page) {
     this.page = page;
     this.usernameInput = page.locator('[data-test="username"]');
@@ -27,11 +27,11 @@ class LoginPage implements ILoginPage {
     this.errorMessage = page.locator('[data-test="error"]');
   }
 
-/**
- * Navigate to the login page.
- *
- * @returns {Promise<void>} A promise that resolves when the navigation is complete.
- */
+  /**
+   * Navigate to the login page.
+   *
+   * @returns {Promise<void>} A promise that resolves when the navigation is complete.
+   */
   async goto(): Promise<void> {
     await this.page.goto('/');
   }
@@ -50,11 +50,11 @@ class LoginPage implements ILoginPage {
     await this.loginButton.click();
   }
 
-/**
- * Retrieves a locator for the element that displays the error message.
- *
- * @returns {Locator} A locator for the element that displays the error message.
- */
+  /**
+   * Retrieves a locator for the element that displays the error message.
+   *
+   * @returns {Locator} A locator for the element that displays the error message.
+   */
   getErrorMessageLocator(): Locator {
     return this.errorMessage;
   }
