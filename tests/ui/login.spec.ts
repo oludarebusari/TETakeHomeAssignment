@@ -69,3 +69,28 @@ test.describe('Login Tests', () => {
     );
   });
 });
+
+test.describe('Login using storage state file (problem_user)', () => {
+  test.use({ storageState: 'states/problem_user.json' });
+
+  test('should load the dashboard page directly for a logged-in user', async ({
+    page,
+  }) => {
+    test.info().annotations.push({
+      type: 'info',
+      description: 'Storage state is not supported by the website'
+    });
+
+     test.fail(); // Mark the test as expected to fail
+
+    // Initialize dashboard page object
+    const dashboardPage = createDashboardPage(page);
+
+    // Verify that we are on the inventory page
+    // await dashboardPage.assertOnInventoryPage();
+
+    // Ensure that products are displayed on the inventory page
+    const productCount = await dashboardPage.getProductCount();
+    expect(productCount).toBeGreaterThan(0);
+  });
+});
