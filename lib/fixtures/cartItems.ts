@@ -1,4 +1,4 @@
-import { CartItems } from '../types';
+import { CartItems } from '../../types';
 
 export const cartItems: CartItems = [
   'Sauce Labs Backpack',

@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { createLoginPage } from '../../page-objects/loginPage';
-import { createDashboardPage } from '../../page-objects/dashboardPage';
-import { validCredentials } from '../../fixtures/loginData';
-import { cartItems } from '../../fixtures/cartItems';
+import { createLoginPage } from '@page-objects/loginPage';
+import { createDashboardPage } from '@page-objects/dashboardPage';
+import { validCredentials } from '@fixtures/loginData';
+import { cartItems } from '@fixtures/cartItems';
 
 test.describe('Add Item Tests', () => {
   let loginPage: ReturnType<typeof createLoginPage>;
