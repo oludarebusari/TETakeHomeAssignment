@@ -1,5 +1,5 @@
 import { config } from 'dotenv';
-import { Credentials } from '../types';
+import { Credentials } from '../../types';
 
 config();
 
