@@ -1,5 +1,5 @@
 import { Locator, Page } from '@playwright/test';
-import { LoginPage as ILoginPage } from '../types';
+import { LoginPage as ILoginPage } from '../../types';
 
 export const ERROR_MESSAGES = {
   INVALID_CREDENTIALS: 'Username and password do not match',

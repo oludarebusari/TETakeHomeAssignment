@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+        "@fixtures/*": ["./lib/fixtures/*"],
+        "@page-objects/*": ["./lib/page-objects/*"]
+    },
+
+  },
+}

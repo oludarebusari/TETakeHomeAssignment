@@ -1,5 +1,5 @@
 import { Locator, Page, expect } from '@playwright/test';
-import { DashboardPage as IDashboardPage } from '../types';
+import { DashboardPage as IDashboardPage } from '../../types';
 
 class DashboardPage implements IDashboardPage {
   readonly page: Page;

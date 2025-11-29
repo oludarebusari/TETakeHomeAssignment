@@ -1,7 +1,7 @@
 import { test as setup } from '@playwright/test';
-import { createLoginPage } from '../page-objects/loginPage';
+import { createLoginPage } from '@page-objects/loginPage';
 // import path from 'path';
-import { createDashboardPage } from '../page-objects/dashboardPage';
+import { createDashboardPage } from '@page-objects/dashboardPage';
 
 let loginPage: ReturnType<typeof createLoginPage>;
 

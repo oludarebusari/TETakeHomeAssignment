@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { createLoginPage, ERROR_MESSAGES } from '../../page-objects/loginPage';
-import { createDashboardPage } from '../../page-objects/dashboardPage';
-import { validCredentials, invalidCredentials } from '../../fixtures/loginData';
+import { createLoginPage, ERROR_MESSAGES } from '@page-objects/loginPage';
+import { createDashboardPage } from '@page-objects/dashboardPage';
+import { validCredentials, invalidCredentials } from '@fixtures/loginData';
 
 test.describe('Login Tests', () => {
   let loginPage: ReturnType<typeof createLoginPage>;
